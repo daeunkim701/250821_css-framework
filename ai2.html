@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐾 우리 아이 자랑하기</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts: Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 전체적인 스타일링 */
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #f8f9fa; /* 부드러운 배경색 */
+      }
+      /* 네비게이션 바 커스텀 */
+      .navbar-brand {
+        font-weight: 700; /* 굵은 폰트 */
+      }
+      /* 히어로 섹션 스타일 */
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?q=80&w=1974&auto=format&fit=crop")
+            no-repeat center center;
+        background-size: cover;
+        color: white;
+        padding: 8rem 0;
+      }
+      /* 카드 이미지 호버 효과 */
+      .card-img-top {
+        transition: transform 0.3s ease-in-out;
+      }
+      .card:hover .card-img-top {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 네비게이션 바 (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">🐾 우리 아이 자랑하기</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">갤러리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#upload-section">자랑하기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. 히어로 섹션 (Main Welcome) -->
+    <header class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">세상에 단 하나뿐인 내 반려동물</h1>
+        <p class="lead">가장 사랑스러운 순간을 모두와 함께 나눠보세요.</p>
+      </div>
+    </header>
+
+    <!-- 3. 메인 콘텐츠: 갤러리 (Flexbox Layout) -->
+    <main id="gallery" class="container my-5">
+      <h2 class="text-center mb-4">🏆 이달의 멍냥이</h2>
+
+      <div class="row">
+        <!-- 반려동물 카드 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://placedog.net/640/480?id=1"
+              class="card-img-top"
+              alt="귀여운 강아지"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">초코</h5>
+              <p class="card-text">
+                산책을 가장 좋아하는 에너지 넘치는 우리집 막내 초코입니다!
+              </p>
+              <a href="#" class="btn btn-primary mt-auto">더 보기</a>
+            </div>
+          </div>
+        </div>
+        <!-- 반려동물 카드 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQw
+                    MDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc
+                    3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA1AMBIgACEQEDEQH/xAAcAAABBQ
+                    EBAQAAAAAAAAAAAAAFAAECAwQGBwj/xAA2EAACAQMCBQMCAwgCAwEAAAABAgMABBEFIQYSMUFREyJhFHEykaEHQlKBscHR
+                    8CNiFSThM//EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACARAQEAAgIDAAMBAAAAAAAAAAABAhESIQMxURMiQTL/2
+                    gAMAwEAAhEDEQA/AOjqQpAVICufToKpClino0CqQpqejQKnFKlS0CpA0qVGoD1g1O4aJookPKz5OaIUF4jyn0sq9QxFZ5zpeHeSTz3djh5gZoNsnOCPmiUMkc8ayREOjDII/pVemzxX1pg4LEYIJxQb1xoV3yNJmzkbB/6HyPiiTR0e5F8YpvTFSVlZQVIOe4pzV6ZqTEKiYavpqOIZmhrJdTQWrASuA5GQo/FU9QvykgtLP33TfGRGPJ+fiqE09oEMs8olL7tI+xY/zpcd1UQguYbh+RQ3Mexq54fihULhtZgEY259/mukYDwKnWzs0FvD8VS0JHSixRaraJfFHAthLRt5qBVxRRoRVTW4NHEbDsvSrb9P9qVLiexRZPtUxIK52PUj5rVHfg96vmOFGw4NSDChaXimrluVNPnC4UQBFS2rCJx/FU1n+arcLVa6VZxPUhNRuFpdSxUBKKmHFGweh+vR+pprlRlkYNRAEGsWt20t3pk0FsSJWxy4OO9Tl3FYXWUAtCufSuj6GDndi2SV/lVHE12lys0Ubes6r+PGQT8UJbULsau1vbRhZOcqvTYfIovdra6c49NVurrHN6jk7+cfnUb6bZyb2AafxLf6bEtvEodQOXlkPTf/AO0RPF13NDmO4iVslCFXuD57eaHXjp9QRPvnY+3fc/7+tC9PsHSOcSw4lkuM4J3QEe3I7Z3rbC9ObL26KHi27QMXuYzghfTkTdic4H6U9xxtO0MipAsMqggON8+dq5jVreaaeFYrc4jP/MxYYXYbnHfB7URsk9N1eS3V4+bOX3yv/wB/tRkMRXg67NwpdVWSZzlmkb3N/eiGu6rzMY8Mko6gNkH+VDobO1LveWA94JYwqCWz/wBQP60GTU5L67LSSMCrY5X6jeolbYzddVw+jzahGzDaNSzH+ldQRQLhCUTQXTcreyQJzkdSBkgfmKPkUsS8ntUag1WkVA1TNURUDVjVA0aCulUsUqNG5wJV0airGtXWqmPp7nYea5uq6r17aVX5qY5x32oc+oxxbD3HwKHahqk7jlj/AONfOaueLKoyzkFrzV4bLIkkXmHYUFuuLLjpbKo8EjNBpOVyWZwe2/Wqmi9GMEHPzW+OEjDLPfpqm1/WWbn+pYfCitVpxfqsJ/5MSgeRQpjyR5kOzUyNGV5VB/Kr1Edu203jO3n5VuF9J/J6V0MOoRTIHidWB7qa8nEIJ2wMVptZbm33hkdR9+tTcN+jmX16st2pHWrFulPR9q88t+IbpcLLEWx1YUXtdXjuP3mU+HFZ3HKNP1rLY6bdniC4vrgn2s3IF2LZJGftRL/xVxJHNNHFzqDgcw//AEx2+d9qtkujLepbWfJ9XMAF9VTgKBkttv8Ar3ofxRBexPBbyX0zxG0aSJIX5FZwcEfljqaUnablqJX2lSXPEOmokJitIYVmkwMbj90n79qlDo0mq8REIfZLNGXPXlC9SPG3esHA11qS38FpqbSta3knoxCc+4NjIOfFdX9XHoemX10xRpDIYkxtuR9/FV3MtF7nQTxLpVvHpmoRaeyh45XlBXcvvnH5bUOngkj0uyeWEieaIFlUHY7H3b7Clf6o1lpkl2+ZLqWQrEvkgdaA6XrWr3F1Iv1YKRI0vKYQEyB0Od6JbZsXUEIkktXf02liwASANsdceaCF0TWMYCK5Dj5zXQ3M8klrHeXNobWKaJWyikplh+lChAk2pQBnBVJl5Sd++4okVv49N0aySxsljU5LsZHYHqx/xsK2kbViWc4qX1BFEsFlaCKgwqv6nyKb6hT4p7LR2FQIqXrKaiXU96ZIUqfK+aegBl/qMcMLkKCcbb9a5qS6cx/8udznFO8hK5Y5FUz5kIXmwMbGjDCYnlncmW4kd9+gNVlFkwGY08rJGpjZtxTQR+oofsT56Vrtkyy20azCRzhfFbBYfUQq7NyRL5FbLfTPq5gzlViX9a16mgKCOAH29QDsRUW9qkBfpoZ5Aiqcr3NQuwyFYIkGehIFbRZhIOcMVJ3qMMeQ0jHbGx80bNlEDogCfjPStNtbYbo8r9z4qy1RrqX3AgHoa2krAntBdzsWU70thTJGIR7hgHt5qVpF9VeQQK5LM2MdMUN1J3iBLZyfPaj/AOyywuNU4kQsoMEC+pIW327D86uTabdClnpktrdXVzcOqyKfThOcEKNsULluJhIyNi4iEmyMCpB8qf3W679966Dirhhv/On6i4/9YuWRXG2TRzSOHEkMTsA7jGOZubA+OvasP7pe+nG3OmOnEOlPpL3VxKj+pIJzzLFt0GKIcbaVPBYWD3ftZy8rpjo3QD74xXpE2nw6Za3d3Y2hmuRCSkYOCxG4AJrx3iji291SxRr6OAekSp2Ybk8uMdc1pcJJ2Mbcr05m7uJtTvNOtEZY40lbEg35SfIoxLbWemB4bq8W9IPuSJBGjfB6k/agdhbm0jW4u1MfqHmUPsds9vtRq006TVUM8SgYP4hvnzntWfLXSuPe6Wo6nPq8DWxQRxPt+EjbtQvhtTLfx28hzLGxGcHfHQ1pvbW/07DQyJJEh91vy4bHwaJ8K25vtSWWOBowoGVOM5+ae+i9UZe5licr1x80hfN3H61K/tmtJzHIPd1rIMYrG2zpvJLNtn13npUhepjtWLbFQZB2o5DgJC8U96X1KH979aDsh8mq25x0NVMi4Dvrf9qVc/zy/wAVPT5l+NF4DiLJ5VHWs98V5kTIz9q1MzsoJ5VFCbpibhsnp0rVhoOv0zeKM5HetNmk8svIgpNh7j1GXIHQ5ojpaMJTIDkKDn4qoTVd3TWsCwAbnuK0Wkfq2v8A2bpVShbmTnZc8narUdpJv/X2SPqKSmG95vqEtV6k+4itNxaKbcR+0dge9Naq8l9JJJjboDTSyZvUBOVBzikFkcP0sYCHfsCauDekrSOoVcYG2/3quQiWUg7KO1YrvnlcxCT2jbc7gUgx61IknJkhlz/ua9e/ZJpYsdFlnLczTvkEIAAB4rxiKyxd800mI13XJ/F9v819BcDQLb8OWiBeUsMlc5rXBnnRLUbOC8TlniWQfIFZ7SBbRSsecAYAJojMM1ikBpZTsoqnvDECcAfNeZ63osEvEp1OKL1IurxE+wyZ/FivRpPaTkZBrJLHbsclf5YqbeUXhZHluqWst3qEXNzxsc4AZsfpXUWWni2tF5k95GwBO56/7muiaKFWzHCoPkjeolh/AKx/Gu57cReaRqV3I4HMik55ZAG/Wui4c0dNNiPsUSNu2BRPr9vFM06xoxGMAb1pjjInLK0H4osWkuVlQDlZeo61z72jjO1HzqSX0zwhgSlR9EHr3rl82Ws3T4/8udMLrviq2DDrXSNaxntVL2UZ6is+bRzxqtiKPvp8Z+KpbTY6qZwgPalRY6WuetKr5wMvFsEMGoSSWW8LHIA6CuRu52SQsqj3CvReIOH7uBXIQuhPbtXnmoQsrMvKQV81132456V2+XQEgcudiK6C0jZbR2C8vMMg9q5m0ZSpVshgenauiiZhpwOCB0GWpBfpkJELsR133Na0WC3t2Cgc3VzneqLKYR2WQO3XzWK2ujOZkOP6UGuhZZ4nZdtzjftWS1iaa65TJgZ7j+labWNbe3fn3x5rPYykTtkLyY2z5pAVjWOAHmO24LGhUpT1S+eY58bCp3MmQSpKgZ3I2FDJrhnmW3UlV6l6IKtiMk96HIDAkf79hXsH7OtaF1bG0flDxjbBztXjZzPJA1oQ3KSB2/nXW8Czx6deqJHxMG9xz1/T+9aY3SMpt7Y+42rLKMGrLedJ4ldCCCKjLvV5M4wTjNYJNjRCbbND7g7GsrGkV5Bqs1WH3xUs5FI0XblG3auU4u1VbSLCAZ6kDrRbX9Tj0+zZ29zfwjrXk2q3kt7ctKoVck+7J3/lmgx/hbU0OuqxX2TKV5h2Piu/JjHevHbGVLGeOczDmRuYEjOfivbdDtNP1/S4b6ymPK43Gd1PisPL4ss7uNcPJMZqsJkj81Wzx+RRmXhd+scufuKztw1cD94GsL4c5/Gs8mH0IZ4yetQLL5onJw9cp2z9qzSaTOnVG/KpuGU/ipnj9Yiy5601WtZsrYYEH7UqntW49EaJWXBXIoLqnC2m6khE0GGP7yjBFdCN+tMF3r2NPM9PPLj9l9kSGtruVG7ZUHNBNb4V1S0iCJbGdV6lPHmvYOWkVouEPlXz/NcegBA4YY8oV+/Ws1ifTuHZMBT1FfQF1p1peLy3MEci+GUGubvuA9Km5jbK0DN15dx+VRcPipn9eXakYpoBHCMt8Vi020a1ZmkJYD8WO9dpffs81SzkMlhPDMp6hvacUIu9F1O0tWE9pK2+MgZxU3GxW4E6jchLcnHu6Agjp80HtoI7qYerzcrfjP8AYU+tB4/TifmBz7sitPq4EFnbyKjMPc3L0okLbO4u7a8IjtyII+gU5xRqC7edUe3BJA3x2J7Z81Gzsns5SHvFniIywPWtNnorfU+rbbIxyVEh3/IGnoWvQuCuIBcQLaybSrtjOcYrsucOoIrz7Q9CmM6STRCAZDFkkJz9+ldosqRx8oYbbVW0aPP3oZcnANabi5UAnmG1ALzVYuYr6gz8GotVIteTlJNJpwqMScADJNBbjUF/jxjcUH1vVfWsGhVivPsfkUlOY4v10alqTxW55kiOObz9qAXM8NuS0sjFz1ANbLu0+iQyxbgnLHNcy7fUXBL75O1XjNlW+DUDGStpAryH94rkmvR/2U8SX1vrMenXoVYbhQRtjB7fbP8AauI0XS1dOcNyAAAuRsK6/ShBp93DdQThnR+bMgAU4+RnejfY092zkBhUTWTTb6O/s4riIgh1G3itRq2eipiB4pZxUS1PQVtbxMcmNSftSqfMPNKlqfFbahTgUu9OapB6WKWRTigGxSKinpUBAqKi0SuMMoINWUjQHD8ecEprdgX06GJLpCWXYDm+Ca8Zngn0y5uI9QjaCdRj3HBA+K+nMZoPrnDOk65GU1OzSXP73Rh/MVOj28G067ij98mbmeTZFaUhUH2HWvb+HbCztrGJxBGkroCxAoLbfs107TrtbnTJXWRRjlmHMuKPLZalF0VH+QcVPcP2LqIh0RcVRPDG+cYH2rJm7jA9W2l+SoyK0RXEePf7T4YEf1pewyTWbE+3eh17pMU68ssCn5xgiukjMbHIOc+KUtsJDhaXE9vI+JuHdTtkL2ANxGN+VfxL/muD1mbUinJLaXEPKfcShA+9fSCWCKxJbJPQZqqeyt5YzHPCjq23LjOacn09vmu0vhPEba5Ox7mhl1prx3kYiyY5GChunWvQP2gcDpYX63elpyW8xP8Axg/gb/FYtB0Se/lFpcKRGBl2BAKqOpp70J2bQNCk1eIlrlbHTUcx87filPfHkUcuOGNN09U/8bLcJcADAkyyS/A7flW/UbiyuI006L0RHEvKnK4LDA64OP0oRdT38UEsTGO8tekfJsVP+ftWc3arrTpP2ea5IdVbTzIWilViFfqjDx3wfB8V6SDtvXh/Dl8g13TLwkNLG/pmQDHbfP8AKvZre7hmGQ1bYorXtUSKWV6Kc/alVJLlpUuU0qA1b04zSFKgiAxUqbNOKAVKn2pbd6Aalin+9NQD029PSoBu9PkilTGgESaiwBPuAP3FKnxS0FL28TA4Xl+V2qDRzrHiI8/jJwa0kUqNAB1S9u4I1lhsrh5Eb3KIi2R/Khuua5BHCypL723VCDzhu2B1rsCNqjye7mHXzU6Vt5leSXfEF0tpFBNyRgM0piIXn/Kup4a4UjsAZ7w88jjBTGMfeuhkIjUu52Hz3qtLlliLv+NjsB/WiST2O6jdaRpl2gW5sYJAOmUG1cTxhwvZ2Nsb+xjMYQ+9VY9+9dTDqplmmCtmONuQt5Peh/EVzDqmg3UCEsTsAp3yDT/USV5Hw/Zy3msRG3VmWOcuCBgE/wCmvbLSyHoLz5LY3oTwjw/HplmrGIJIR0PUDxXSnI2WiQVnFsFOzMKtCkfvVNcnrUuUVSUc0qfFKg12dqWTTUqRJLvSpUqAfFOKVKmDE7gU460qVAORSpUqAVKlSoBqalSoB6VKlQDGlmlSoDLqS89jOOYqeQkEdRXCx65fLqsFnzq0Xpk7jfvSpVnmvD0e2u5eecbbSZG3xmh/DWp3F3qTwS8vJ6x6D5pqVRip6WoAG1OaVKt4zIUu9KlQRUqVKgP/2Q=="
+              class="card-img-top"
+              alt="시크한 고양이"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">나비</h5>
+              <p class="card-text">
+                시크한 표정이 매력적인 우리 집 고양이 나비, 츄르를 제일
+                좋아해요.
+              </p>
+              <a href="#" class="btn btn-primary mt-auto">더 보기</a>
+            </div>
+          </div>
+        </div>
+        <!-- 반려동물 카드 3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://placedog.net/640/480?id=3"
+              class="card-img-top"
+              alt="웃는 강아지"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">해피</h5>
+              <p class="card-text">
+                이름처럼 항상 웃고 있는 해피 바이러스! 보는 사람도 행복해져요.
+              </p>
+              <a href="#" class="btn btn-primary mt-auto">더 보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 4. 사진 업로드 섹션 (Call to Action) -->
+    <section id="upload-section" class="bg-light py-5">
+      <div class="container text-center">
+        <h2 class="mb-3">여러분의 반려동물을 자랑해주세요!</h2>
+        <p class="mb-4">
+          아래 버튼을 눌러 여러분의 소중한 가족을 소개할 수 있습니다.
+        </p>
+        <button type="button" class="btn btn-success btn-lg">
+          지금 바로 사진 올리기
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. 푸터 (Footer) -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 우리 아이 자랑하기. All Rights Reserved.</p>
+        <p class="mb-0">Designed with ❤️ by Gemini</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (Popper.js 포함) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
